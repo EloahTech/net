@@ -1,0 +1,2 @@
+cat /var/log/ufw.log | grep "SRC=" | awk '{print $12}' | grep "SRC=" | grep "\." | sed 's/SRC=//' | sort -u > dropped-ipv4.txt
+# cat dropped-ipv6.txt
